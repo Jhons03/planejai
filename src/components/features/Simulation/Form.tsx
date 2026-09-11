@@ -1,0 +1,14 @@
+import { simulationFormSteps } from '@/data/Simulation'
+import { FormStep } from './FormStep'
+import { StepProgress } from './Progress'
+
+export const SimulationForm = () => {
+  const currentStep = simulationFormSteps[5]
+
+  return (
+    <>
+      <StepProgress currentStep={6} totalSteps={8} />
+      <FormStep key={currentStep.id} {...currentStep} />
+    </>
+  )
+}
